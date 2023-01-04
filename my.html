@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <title>20001010733-马旭 我的</title>
+    <script src="./fonts/iconfont.js"></script>
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/pub.css">
+    <style>
+        /* 图标 */
+        .icon{
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        /* 上导航 */
+        .header{
+            display: flex;  
+            margin-top: 4px;   
+        }
+        .header>span{  
+            font-size: 20px;
+            color: #333;
+            line-height: 20px; 
+            margin: 0 10px;
+            flex-grow: 1;   
+        } 
+        .header span:nth-of-type(1){
+            width: 60%;
+        }
+        .header p{
+            font-size: 12px;
+        }
+        /* 固定上导航 */
+        #fixed{
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+            height: 45px;
+        }
+        /* 头像 */
+        .tb{
+            display: flex;
+            margin-top: 10px;
+        }
+        .tb .tx{
+            display: flex;
+        }
+        .tx img{
+            height: 60px;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .tx span{
+            margin: 6px 0;
+            font-size: 18px;
+            color: #000;
+            line-height: 35px;
+        }
+        .tx p{
+            font-size: 14px;
+            color:rgb(119,119,119)
+        }
+        .tb div:nth-of-type(1){
+            width: 75%;
+        }
+        .sj{
+            margin-top: 25px;
+            height: 25px;
+            width: 20%;
+            background-color: rgb(215,189,115);
+            border-radius: 6px 6px 6px 0;
+            line-height: 25px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .sj span{
+            color: rgb(255, 255, 229);
+        }
+        /* 积分 */
+        .jf{
+            display: flex;  
+            margin-top: 10px;
+        }
+        .jf img{
+            width: 92%;
+            border-radius: 8px 8px 0 0;
+            margin: 0 15px;
+        }
+        .wz span,.wz p{
+            line-height: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .jf .wz{
+            position: absolute;
+            top: 165px;
+            left: 0; 
+            display: flex;
+            width: 100%;
+        }
+        .wz span{
+            width: 100%;
+            color: rgb(223, 212, 158);
+        }
+        .wz p{
+            color: #fff;
+            margin: 20px 0;
+        }
+        /* 资产负债 */
+        .zcfz .icon{
+            width: 1em;
+            height: 1em;
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        .zcfz{
+            border: 1px solid #ccc;
+            border-radius: 10px; 
+            width: 92%;
+            margin: 30px 15px;
+        }
+        .zcfz .bt{
+            background-color: rgb(252,238,203);
+            border-bottom: 1px solid #eee;
+            line-height: 38px;
+        }
+        .bt .txt{
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .zcfz .ts{
+            line-height: 40px;
+        }
+        .ts .txt{
+            font-size: 16px;
+            color: #000;
+        }
+        .ts p{
+            color:rgb(155, 155,155);
+            font-size: 15px;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .tb .content{
+            margin-top: 12px;
+            border: 1px solid rgb(211,187,113);
+            border-radius: 12px; 
+            height: 28px;
+        }
+        .content>span{
+            font-size: 16px;
+            color: rgb(251,169,8);
+        }
+        .zcfz .db{
+            border-top: 1px solid #ccc;
+            margin-left: 20px;
+            width: 90%;
+            line-height: 30px;
+            margin-bottom: 5px;
+        }
+        .db>span{
+            margin-top: 2px;
+            color:rgb(136, 136,136);
+            font-size: 14px;
+        }
+        /* 我的订单 安全中心 我的网点 */
+        .wddd .icon,.aqzx .icon,.wdwd .icon{
+            width: 3em;
+            height: 3em;
+        }
+        .wddd,.aqzx,.wdwd{
+            border: 1px solid #ccc;
+            border-radius: 10px; 
+            background-color: #fff;
+            width: 92%;
+            margin: 30px 15px;
+        }
+        .wddd .header,.aqzx .header,.wdwd .header{
+            padding: 10px;
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .wddd .txt,.aqzx .txt,.wdwd .txt{
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+        .wddd .iconfont,.aqzx .iconfont{
+            font-size: 25px;
+            flex-grow: 1;
+            color: #888;
+            text-align: right;
+        }
+        .tb .dd,.tb .zx,.tb .wd{
+            margin: 10px;
+            display: flex;
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+        }
+        .dd>li,.zx>li,.wd>li{
+            width: 100%;
+            line-height: 30px;  
+            font-size: 12px;
+            text-align: center;
+            background-color: #fff;
+            font-weight: bold;
+            color: #000; 
+        }
+        .dd p,.zx p,.wd p{
+            font-size: 14px;
+        }
+        .wdwd{
+            margin-bottom: 100px;
+        }
+        /* 盒子的阴影 */
+        .zcfz,.wddd,.aqzx,.wdwd{
+            box-shadow: 6px 6px 6px rgb(237, 237, 237);
+        }
+        .sj{
+            box-shadow: 6px 6px 6px rgb(242, 233, 204);
+        }
+         /* 下导航 */
+        #bnav{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 9;
+        }
+        #bnav .icon{
+          width: 1em;
+          height: 1em;
+        }
+        #bnav ul{
+            border-top: 1px solid #eee;
+            display: flex;
+        }
+        #bnav li{
+            width: 20%;
+            text-align: center;
+        }
+        #bnav svg{
+            font-size: 30px;
+            margin: 6px auto;
+        }
+        #bnav p{
+            font-size: 14px;
+            line-height: 24px;
+            color: rgb(102, 102,102);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        #bnav li:nth-child(5) svg{
+            color: rgb(91,201,164);
+        }
+        #bnav li:nth-child(5) p{
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="fixed">
+        <div class="header">
+            <span class="iconfont icon-tuichu"> <a href="./login.html"><p>退出</p></a></span>
+            <span class="iconfont icon-sousuoxiao"><a href="./rearch.html"><p>搜索</p></a></span>
+            <span class="iconfont icon-31shezhi"><a href="./setting.html"><p>设置</p></a></span>
+            <span class="iconfont icon-gengduo1"><p>更多</p>
+        </span>
+        </div>
+    </div>
+    <main>
+      <div class="tb">
+        <div class="tx">
+            <img src="./img/tx.jpg">
+        <span>*旭<p>上次登录 今天</p></span>
+        </div>
+        <div class="sj">
+            <span>S1星级 ➤</span>
+        </div>
+    </div>
+    <div class="jf">
+        <img src="./img/jf.jpg">
+        <div class="wz">
+            <span>0<p>银行卡</p></span>
+            <span>0<p>小豆</p></span>
+            <span>0<p>积分</p></span>
+            <span>0<p>礼券</p></span>
+        </div>
+    </div>
+    <div class="zcfz">
+        <div class="bt"><span class="txt">资产负债</span></div>
+        <div class="nr">
+            <div class="tb">
+                <div class="ts">
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-yhk"></use>
+                </svg>
+              <span class="txt">您未开通我行账户</span>
+              <p>暂无法查看名下资产负债及收支情况</p>
+              </div>
+              <div class="content">
+                <span>立即开户</span>
+              </div>
+            </div>
+        </div>
+        <div class="db">
+            <span>在线开立绑账户,畅享更多服务 >></span>
+        </div>
+    </div>
+        <div class="wddd">
+            <div class="header">
+                <span class="txt">我的订单</span>
+                <span class="iconfont icon-jinru"></span>
+            </div>
+            <div class="tb">
+                <ul class="dd">
+                </ul>
+            </div>
+        </div>   
+        </div>
+        <div class="aqzx">
+            <div class="header">
+                <span class="txt">安全中心</span>
+                <span class="iconfont icon-jinru"></span>
+            </div>
+            <div class="tb">
+                <ul class="zx">
+                </ul>
+            </div>
+        </div>   
+        </div>
+        <div class="wdwd">
+            <div class="header">
+                <span class="txt">我的网点</span>
+            </div>
+            <div class="tb">
+                <ul class="wd">
+                </ul>
+            </div>
+        </div>   
+    </main>
+    <footer>
+        <nav id="bnav">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div>
+                            <a href="./index.html">
+                                <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shouyexuanzhong1-copy"></use>
+                              </svg>
+                            </a>
+                        </div>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shouzhimingxicaifuhongbaoyue-copy-copy"></use>
+                              </svg>
+                        </div>
+                        <p>财富</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <div>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gouwu1-copy"></use>
+                              </svg>
+                        </div>
+                        <p>生活</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <div>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shu-04-copy-copy"></use>
+                              </svg>
+                        </div>
+                        <p>乡村振兴</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <div>
+                            <a href="./my.html">
+                                <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-wode1"></use>
+                              </svg>
+                            </a>
+                        </div>
+                        <p>我的</p>
+                    </a>
+                </li>            
+            </ul>
+        </nav>
+    </footer>
+<!-- json -->
+<script>
+    var jarrdd=[{
+        svg:"#icon-ddqbdd",
+        wenzi:"全部"
+    },{
+        svg:"#icon-dddfh",
+        wenzi:"待发货"
+    },{
+        svg:"#icon-dddsh",
+        wenzi:"待收货"
+    },{
+        svg:"#icon-ddywc",
+        wenzi:"已完成"
+    }];
+    //dom:
+    var wddd =document.querySelector(".dd");
+    jarrdd.forEach((v,i)=>{
+        var nli=document.createElement("li");
+        nli.innerHTML=`
+        <svg class="icon" aria-hidden="true">
+                <use xlink:href="${v.svg}"></use>
+            </svg>
+            <p>${v.wenzi}</p> `;
+            wddd.appendChild(nli);
+    })
+    var jarrzx=[{
+        svg:"#icon-aqdlsz",
+        wenzi:"登录设置"
+    },{
+        svg:"#icon-aqzzsz",
+        wenzi:"转账设置"
+    },{
+        svg:"#icon-zzsz",
+        wenzi:"支付设置"
+    },{
+        svg:"#icon-aqsjhgl",
+        wenzi:"手机号管理"
+    }];
+    //dom:
+    var aqzx =document.querySelector(".zx");
+    jarrzx.forEach((v,i)=>{
+        var nli=document.createElement("li");
+        nli.innerHTML=`
+        <svg class="icon" aria-hidden="true">
+                <use xlink:href="${v.svg}"></use>
+            </svg>
+            <p>${v.wenzi}</p> `;
+            aqzx.appendChild(nli);
+    })
+    var jarrwd=[{
+        svg:"#icon-wdfw",
+        wenzi:"网点服务"
+    },{
+        svg:"#icon-qbdd",
+        wenzi:"开卡预填单"
+    },{
+        svg:"#icon-wdqk",
+        wenzi:"无卡取款"
+    },{
+        svg:"#icon-wdkhjl",
+        wenzi:"客户经理"
+    }];
+    //dom:
+    var wdwd =document.querySelector(".wd");
+    jarrwd.forEach((v,i)=>{
+        var nli=document.createElement("li");
+        nli.innerHTML=`
+        <svg class="icon" aria-hidden="true">
+                <use xlink:href="${v.svg}"></use>
+            </svg>
+            <p>${v.wenzi}</p> `;
+            wdwd.appendChild(nli);
+    })
+    
+</script>
+<!-- 固定上导航 -->
+<script>
+    window.onscroll=function(){
+       var sd=document.documentElement.scrollTop;
+       if(sd>fixed.offsetHeight){
+        fixed.style.position="fixed";
+       }
+       else{
+        fixed.style.position="static";
+       }
+    }
+</script>
+</body>
+</html>

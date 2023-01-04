@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20001010733-马旭 首页</title>
+    <script src="./fonts/iconfont.js"></script>
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/pub.css">
+    <link rel="stylesheet" href="./js/swiper/swiper-bundle.min.css">
+    <style>
+        .icon{
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        /* 上导航 */
+        .background img{
+            width: 100%;
+        }
+        .background .header{
+            display: flex;
+            margin-top: 6px;
+            margin-bottom: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;  
+            width: 100%;
+        }
+        .header>span{
+            padding: 0 6px;
+            font-size: 20px;
+        }
+        .header>div{
+            flex-grow: 1;
+            display: flex;
+            background-color:rgba(206, 146, 109,.5);
+            border-radius: 20px;
+            padding-right: 10px;
+        }
+        .header>div span{
+            font-size: 16px;
+            margin: 0 4px;
+            line-height: 32px; 
+        }
+        .header p{
+            font-size: 12px;
+        }
+        .header input{
+            background-color:rgba(206, 146, 109,.1);  
+            border: none;
+            flex-grow: 1;
+            outline: none; 
+            line-height: 32px;
+        }
+        /* 上导航固定 */
+        #fixed{  
+            width: 100%;  
+            left: 0;  
+            top: 0;   
+            height: 45px;
+            background-color: #fff;
+        }
+        /* 大标签 */
+        .jbgn .sy{
+            margin: 0 10px 20px;
+            margin: 10px;
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 10px; 
+            text-align: center;
+            padding: 5px;
+            background-color: #fff;
+            height: 90px;
+        }
+        .jbgn .icon{
+            width: 3em;
+            height: 3em;
+        }
+        .sy>li{
+            padding-top: 10px;
+            width: 25%;
+            line-height: 30px;  
+            font-size: 12px;
+            text-align: center;
+            font-weight: bold;
+            color: #000;
+            letter-spacing: 1px;
+        }
+        .jbgn{
+            width: 100%; 
+            left: 0px;
+            top: 130px;
+            position: absolute;
+        }
+        /* 小标签 */
+        .biaoqian .shouye{
+            margin-top: 60px;
+            display: flex;  
+            flex-wrap: wrap;  
+            padding: 3px;
+        }
+        .shouye .icon{
+            font-size: 25px;
+            width: 1em;
+            height: 1em;
+        }
+        .shouye>li{
+            width: 20%;
+            line-height: 30px;  
+            font-size: 13px;
+            margin-bottom: 15px;
+            text-align: center;
+            background-color: #fff;
+            color: rgb(1, 1, 1);
+        }
+        .wenzi{
+            display: flex;
+            height: 33px;
+            line-height: 33px;
+            overflow: hidden;
+            text-align: center;
+            font-size: 14px;
+            color: #000; 
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-top: 10px;
+        }
+        .wenzi .icon{
+            width: 1em;
+            height: 1em;
+        }
+        /* 轮播图 */
+        .photo{
+           margin-top: 20px;
+        }
+        .photo img{
+            border-radius: 12px;
+            width: 93%; 
+            margin: 0 10px;
+            height: 100px;
+        }
+        /* 乡村集市 */
+        .xcjs{
+           margin: 30px 15px 40px 15px;
+        }
+        .xcjs .header{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .xcjs .txt{
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+        .xcjs .iconfont{
+            font-size: 25px;
+            flex-grow: 1;
+            color: #888;
+            text-align: right;
+        }
+        .zhaopian img{
+            border-radius: 12px;
+            width: 100%; 
+            height: 100px;
+        }
+        /* 咨询 */
+        .zx{
+            margin: 20px 15px 100px 15px;
+        }
+        .zx .header{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .zx .txt{
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+        .zx .iconfont{
+            font-size: 25px;
+            flex-grow: 1;
+            color: #888;
+            text-align: right;
+        }
+        .content li{
+            margin-left: 5px;
+            display: flex;
+            border-bottom: .5px solid #eee;
+            margin-bottom: 8px;
+            padding-bottom: 10px;
+            line-height: 60px;
+        }
+        .content img{
+            width: 30%;
+            height: 70px;
+            border-radius: 12px; 
+            margin-bottom: 15px;
+        }
+        .wz{
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+        .wz span{
+            line-height: 22px;
+        }
+        .contento,.contentt{
+            font-size: 16px;
+            width: 100%;
+            color: #000;
+            letter-spacing: 1px;
+        }
+        .time{
+            flex-grow: 1;
+            text-align:left;
+            font-size: 12px;
+            margin-top: 15px;
+            color:#888;
+            letter-spacing: 1px;
+        }
+        /* 下导航 */
+        #bnav{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 9;
+        }
+        #bnav .icon{
+            width: 1em;
+            height: 1em;
+        }
+        #bnav ul{
+            border-top: 1px solid #eee;
+            display: flex;
+        }
+        #bnav li{
+            width: 20%;
+            text-align: center;
+        }
+        #bnav svg{
+            font-size: 30px;
+            margin: 6px auto;
+        }
+        #bnav p{
+            font-size: 14px;
+            line-height: 24px;
+            color: rgb(102, 102,102);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        #bnav li:nth-child(1) svg{
+            color: rgb(91,201,164);
+        }
+        #bnav li:nth-child(1) p{
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <img src="./img/sybj.jpg">
+        <div id="fixed">
+            <div class="header">
+                <span class="iconfont icon-choujiang1"><p>抽奖</p></span>
+                <div>
+                <a href="./rearch.html"><span class="iconfont icon-sousuo3"></span></a>
+                <input type="text" placeholder="养老专区"> 
+                <span class="iconfont icon-yuyin"></span>  
+                </div>
+            <span class="iconfont icon-zhuanzhang"><p>版本</p></span>
+            <span class="iconfont icon-kefu2"> <a href="./service.html"><p>客服</p></a></span>
+            <span class="iconfont icon-xiaoxi"><p>消息</p></span>
+        </div>
+    </div>
+</div>
+    <main>
+        <div class="jbgn">
+        <ul class="sy">
+            <li>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-wodezhanghu"></use>
+                </svg>
+                <p>我的账户</p>
+            </li>
+            <li>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhuanzhang11"></use>
+                </svg>
+                <p>转账</p>
+            </li>
+            <li>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-mingxichaxun"></use>
+                </svg>
+                <p>明细查询</p>
+            </li>
+            <li>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-saoyisao"></use>
+                </svg>
+                <p>扫一扫</p>
+            </li>
+    </div>
+
+    <div class="biaoqian">
+        <ul class="shouye">
+        </ul>
+    </div>
+    <div class="swiper wenzi">
+        <div class="swiper-wrapper">
+          <div class="tb">
+          </div>
+          <div class="swiper-slide">中国农业银行服务价格标准(2022)</div>
+          <div class="swiper-slide">科技部、住建部印发《“十四五”城镇化</div>
+          <div class="swiper-slide">安徽:到2025年风光总装机达到36GW</div>
+          <div class="swiper-slide">皮海洲:进行投资者教育的主体应是投资保护机构</div>
+    </div>
+    </div>
+
+    <div class="swiper photo">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./img/8.jpg"></div>
+          <div class="swiper-slide"><img src="./img/9.jpg"></div>
+          <div class="swiper-slide"><img src="./img/10.jpg"></div>
+          <div class="swiper-slide"><img src="./img/11.jpg"></div>
+    </div>
+    </div>
+
+    <div class="xcjs">
+        <div class="header">
+            <span class="txt">乡村集市</span>
+            <span class="iconfont icon-jinru"></span>
+        </div>
+        <div class="zhaopian">
+            <img src="./img/xcjs.jpg">
+        </div>
+    </div>
+    <div class="zx">
+        <div class="header">
+            <span class="txt">资讯</span>
+            <span class="iconfont icon-jinru"></span>
+        </div>
+        <ul class="content"></ul>
+    </div>
+    </main>
+    <footer>
+        <nav id="bnav">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div>
+                            <a href="./index.html">
+                                <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shouyexuanzhong1-copy"></use>
+                              </svg>
+                            </a>
+                        </div>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shouzhimingxicaifuhongbaoyue-copy-copy"></use>
+                              </svg>
+                        </div>
+                        <p>财富</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <div>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gouwu1-copy"></use>
+                              </svg>
+                        </div>
+                        <p>生活</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <div>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shu-04-copy-copy"></use>
+                              </svg>
+                        </div>
+                        <p>乡村振兴</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <div>
+                            <a href="./my.html">
+                                <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-wode1"></use>
+                              </svg>
+                            </a>
+                        </div>
+                        <p>我的</p>
+                    </a>
+                </li>            
+            </ul>
+        </nav>
+    </footer>
+    <!-- json -->
+    <script>
+        var jarr=[{
+            svg:"#icon-xinyongka1",
+            wenzi:"信用卡"
+        },{
+            svg:"#icon-cunkuan",
+            wenzi:"存款"
+        },{
+            svg:"#icon-qianbao",
+            wenzi:"收支"
+        },{
+            svg:"#icon-remenhuodong",
+            wenzi:"热门活动"
+        },{
+            svg:"#icon-wangdainchaxun",
+            wenzi:"网点查询"
+        },{
+            svg:"#icon-daikuan1",
+            wenzi:"贷款"
+        },{
+            svg:"#icon-licaichanpin",
+            wenzi:"理财产品"
+        },{
+            svg:"#icon-jijin1",
+            wenzi:"基金"
+        },{
+            svg:"#icon-bendiyouhui",
+            wenzi:"本地优惠"
+        },{
+            svg:"#icon-gengduo2",
+            wenzi:"全部"
+        }];
+
+        //dom:
+        var svg =document.querySelector(".shouye");
+        jarr.forEach((v,i)=>{
+            var nli=document.createElement("li");
+            nli.innerHTML=`
+            <svg class="icon" aria-hidden="true">
+                    <use xlink:href="${v.svg}"></use>
+                </svg>
+                <p>${v.wenzi}</p> `;
+                svg.appendChild(nli);
+        })
+    </script>
+    <!-- 上导航固定 -->
+    <script>
+        window.onscroll=function(){
+           var st=document.documentElement.scrollTop;
+           if(st>fixed.offsetHeight){
+            fixed.style.position="fixed";
+           }
+           else{
+            fixed.style.position="static";
+           }
+        }
+    </script>
+    <!-- 文字swiper -->
+    <script src="./js/swiper/swiper-bundle.min.js"></script>
+    <script>
+         var wzswiper = new Swiper(".wenzi", {
+         direction: "vertical",
+         autoplay: {
+           delay: 2500,
+           disableOnInteraction: false,
+         }
+         })
+    </script>
+    <!-- 图片swiper -->
+    <script>
+        var tpswiper = new Swiper(".photo", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        }
+      })
+    </script>
+    <!-- AJAX -->
+    <script>
+        var url="http://rap2api.taobao.org/app/mock/308895/zixun";
+        var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.send();
+
+            xhr.onreadystatechange = function(){
+                 if (xhr.readyState === 4 && xhr.status === 200) {
+                 var jarr=JSON.parse(xhr.responseText);
+                 insert(jarr);
+                }                
+            }
+
+        function insert(jarr){
+            var alist=document.querySelector(".content");
+            jarr.forEach((v,i) => {
+                var nli = document.createElement("li");
+            nli.innerHTML= `
+            <div class="wz">
+            <span class="contento">${v. contento}</span>
+            <span class="contentt">${v. contentt}</span>
+            <span class="time">${v. time}</span>
+            </div>
+            <img src="${v. img}">`
+            alist.appendChild(nli);
+            })
+        }
+    </script>
+</div>
+</body>
+</html>
+

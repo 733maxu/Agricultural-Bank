@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <title>20001010733-马旭 搜索发现</title>
+    <script src="./fonts/iconfont.js"></script>
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/pub.css">
+    <style>
+        /* 上导航 */
+        .ssheader{
+            display: flex;  
+            margin-top: 8px;   
+            margin-left: 4px;
+        }
+        .ssheader>div{   
+            flex-grow: 1;   
+            display: flex;   
+            background-color:rgb(241,241,241);
+            border-radius: 20px;   
+            padding-right: 10px;  
+        }
+        .ssheader>div span{
+            font-size: 20px;
+            margin: 0 4px;
+            line-height: 32px; 
+            color:rgb(201,201,201);
+        }
+        .ssheader .qx{
+            line-height: 32px;  
+            font-size: 16px;
+            margin: 0 10px;  
+            color:rgb(119,119,119);
+        }
+        .ssheader input{  
+            background-color:rgb(241,241,241);   
+            border: none;    
+            flex-grow: 1;   
+            outline: none;   
+            line-height: 32px; 
+        }
+        /* 上导航固定 */
+        #fixed{  
+            width: 100%;  
+            left: 0;  
+            top: 0;   
+            height: 48px;
+            background-color: #fff;
+        }
+        /* 搜索发现 */
+        .ssfx{
+            margin: 15px 8px;
+        }
+        .ssfx .header{
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .ssfx .txt{
+            font-size: 18px;
+            color: #000;
+        }
+        .ssfx .contenta,.ssfx .contentb{
+            font-size: 14px;
+            color: #000;
+            line-height: 20px;
+            display: flex;
+        }
+        .contenta .xdly,.contenta .czbjk,.contentb .ylzq,.contentb .rmhd,.contentb .zxzq,.contenta .st,.contentb .sz{
+            width: 22%;
+            border-radius: 12px; 
+            background-color:rgb(253,238,233);
+            margin: 8px 8px 5px 0;
+            text-align: center;
+            padding: 5px;
+        }
+        .contenta .st,.contentb .sz{
+            width: 10%;
+        }
+        /* tab选项卡 */
+        .tab{
+            margin: 15px;
+        }
+        .tab .tt{
+            display: flex;
+            width: 100%;
+        }
+        .tt span{
+            width: 30%;
+            margin: 18px;
+            color:rgb(109,109,109);
+            font-size: 20px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+        .tt .cur{
+            color: rgb(33, 184, 151);
+            padding-bottom: 10px;
+            border-bottom: 3px solid rgb(33, 184, 151);
+            background-color: #fff;
+        }
+        .tab .tc{
+            display: none;
+            height: 100px;
+            background: linear-gradient(rgb(253,238,233),#fff);
+            border-radius: 6px;   
+            width: 100%;
+            padding-top: 30px;
+        }
+        .phb li{
+            line-height: 80px;
+            flex-wrap: wrap;
+        }
+        .phb h3{
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 8px;
+            margin-left: 23px;
+        }
+        .phb .tb h3{
+            margin-left: 0;
+        }
+        .phb p{
+            font-size: 15px;
+            color:rgb(201,201,201);
+            margin-left: 45px;
+        }
+        .phb .sc,.phb .tb{
+            line-height: 15px;
+            display: flex;
+        }
+        .phb .sc p,.phb .tb p{
+            margin-left: 13px;
+            font-size: 20px;
+            color: #000;
+        }
+        .phb .sc span,.phb .tb span{
+            font-size: 15px;
+            margin-left: 2px;
+            color:rgb(119,119,119);
+        }
+        .icon{
+            width: .8em;
+            height: .8em;
+            margin: 0 20px 0 10px;
+            vertical-align: -0.15em; 
+            fill: currentColor; 
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- 上导航 -->
+    <div id="fixed">
+        <div class="ssheader">
+            <div>
+            <span class="iconfont icon-sousuo3"></span>  
+            <input type="text" placeholder="视觉会员折扣">  
+            <span class="iconfont icon-yuyin"></span>
+        </div>
+        <a href="./index.html"><span class="qx">取消</span></a>
+        </div>
+    </div>
+    <!-- 搜索发现 -->
+    <div class="ssfx">
+        <div class="header">
+            <span class="txt">搜索发现</span>
+        </div>
+        <div class="contenta">
+            <span class="xdly">小豆乐园</span>
+            <span class="czbjk">车主白金卡</span>
+            <span class="st">食堂</span>
+        </div>
+        <div class="contentb">
+            <span class="ylzq">养老专区</span>
+            <span class="sz">收支</span>
+            <span class="rmhd">热门活动</span>
+            <span class="zxzq">资讯专区</span>  
+        </div>
+    </div>
+    <!-- tab选项卡 -->
+    <div class="tab">
+        <div class="tt">
+            <span class="cur">热搜榜</span>
+            <span>产品榜</span>
+            <span>生活榜</span>
+        </div>
+    <div class="tc" style="display:block">
+            <ul class="phb">
+                <li>
+                    <div class="tb">
+                           <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-ssfx1"></use>
+                        </svg> 
+                        <h3>纪念币预约</h3>
+                        <span>/功能</span>
+                    </div>
+                    <p>人气值 817752</p>
+                </li>
+                <li>
+                    <div class="tb">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-ssfx2"></use>
+                        </svg>
+                        <h3>数字人民币</h3>
+                        <span>/功能</span>
+                     </div>  
+                    <p>人气值 765720</p>    
+                </li>
+                <li>
+                    <div class="tb">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-ssfx3"></use>
+                        </svg>
+                        <h3>本地优惠</h3>
+                        <span>/功能</span>
+                    </div>
+                    <p>人气值 728200</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>4</p>
+                        <h3>工资单</h3>
+                        <span>/功能</span>
+                    </div>
+                    <p>人气值 668492</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>5</p>
+                        <h3>城市专区</h3>
+                        <span>/功能</span>
+                    </div>
+                    <p>人气值 643659</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>6</p>
+                        <h3>任务中心</h3>
+                        <span>/功能</span>
+                    </div>
+                    <p>人气值 562443</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>7</p>
+                        <h3>个人信用报告</h3>
+                        <span>/功能</span>
+                    </div>
+                    <p>人气值 391396</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>8</p>
+                        <h3>校园小程序</h3>
+                        <span>/功能</span>
+                    </div>
+                    <p>人气值 343934</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>9</p>
+                        <h3>开户行查询</h3>
+                        <span>/功能</span>
+                    </div>
+                    <p>人气值 260246</p>
+                </li>
+            </ul>
+        </div>
+        <div class="tc">
+            <ul class="phb">
+                <li>
+                    <div class="tb">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-ssfx1"></use>
+                        </svg> 
+                        <h3>农银理财</h3>
+                    </div>
+                    <p>人气值 817752</p>
+                </li>
+                <li>
+                    <div class="tb">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-ssfx2"></use>
+                        </svg>
+                        <h3>金钥匙</h3>
+                    </div>
+                    <p>人气值 765720</p>
+                </li>
+                <li>
+                    <div class="tb">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-ssfx3"></use>
+                        </svg>
+                        <h3>安心62天</h3>
+                    </div>
+                    <p>人气值 728200</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>4</p>
+                        <h3>安心360天</h3>
+                    </div>
+                    <p>人气值 668492</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>5</p>
+                        <h3>农银匠心</h3>
+                    </div>
+                    <p>人气值 643659</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>6</p>
+                        <h3>安心720天</h3>
+                    </div>
+                    <p>人气值 562443</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>7</p>
+                        <h3>农银红利日结A</h3>
+                    </div>
+                    <p>人气值 391396</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>8</p>
+                        <h3>银钥匙</h3>
+                    </div>
+                    <p>人气值 343934</p>
+                </li>
+                <li>
+                    <div class="sc">
+                        <p>9</p>
+                        <h3>农银安心</h3>
+                    </div>
+                    <p>人气值 260246</p>
+                </li>
+            </ul>
+        </div>
+            <div class="tc">
+                <ul class="phb">
+                    <li>
+                        <div class="tb">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-ssfx1"></use>
+                            </svg>
+                            <h3>纪念币预约</h3>
+                        </div>
+                        <p>人气值 817752</p>
+                    </li>
+                    <li>
+                        <div class="tb">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-ssfx2"></use>
+                            </svg>
+                            <h3>数字人民币</h3>
+                        </div>
+                        <p>人气值 765720</p>
+                    </li>
+                    <li>
+                        <div class="tb">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-ssfx3"></use>
+                            </svg>
+                            <h3>茅台预约1499抢茅台</h3>
+                        </div>
+                        <p>人气值 728200</p>
+                    </li>
+                    <li>
+                        <div class="sc">
+                            <p>4</p>
+                            <h3>个人信用报告</h3>
+                        </div>
+                        <p>人气值 668492</p>
+                    </li>
+                    <li>
+                        <div class="sc">
+                            <p>5</p>
+                            <h3>城市专区</h3>
+                        </div>
+                        <p>人气值 643659</p>
+                    </li>
+                    <li>
+                        <div class="sc">
+                            <p>6</p>
+                            <h3>任务中心</h3>
+                        </div>
+                        <p>人气值 562443</p>
+                    </li>
+                    <li>
+                        <div class="sc">
+                            <p>7</p>
+                            <h3>瑞幸饮品券折扣</h3>
+                        </div>
+                        <p>人气值 391396</p>
+                    </li>
+                    <li>
+                        <div class="sc">
+                            <p>8</p>
+                            <h3>幸运金球纪念币套装</h3>
+                        </div>
+                        <p>人气值 343934</p>
+                    </li>
+                    <li>
+                        <div class="sc">
+                            <p>9</p>
+                            <h3>金卡查询</h3>
+                        </div>
+                        <p>人气值 260246</p>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    
+<!-- 固定上导航 -->
+<script>
+        window.onscroll=function(){
+           var st=document.documentElement.scrollTop;
+           if(st>fixed.offsetHeight){
+            fixed.style.position="fixed";
+           }
+           else{
+            fixed.style.position="static";
+           }
+        }
+</script>
+<!-- tab选项卡 -->
+<script>
+        // dom
+        var tab=document.getElementsByClassName("tab")[0];
+        var tt=tab.querySelector(".tt");
+        var span=tt.querySelectorAll("span");
+        var tc=tab.getElementsByClassName("tc");
+        console.log(tab,tt,span,tc);
+        for(let i=0;i<span.length;i++){
+            span[i].index=i; 
+            span[i].onmouseover=function(){ 
+                for(let j=0;j<span.length;j++){
+                    span[j].classList.remove("cur");
+                    tc[j].style.display="none";
+                }
+                span[i].classList.add("cur");
+                tc[i].style.display="block"; 
+            }
+        }
+</script>
+</script>
+</body>
+</html>

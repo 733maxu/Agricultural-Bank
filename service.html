@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <title>20001010733-马旭 在线客服</title>
+    <script src="./fonts/iconfont.js"></script>
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/pub.css">
+    <link rel="stylesheet" href="./js/swiper/swiper-bundle.min.css">
+    <style>
+        /* 上导航 */
+        .header{
+            display: flex;
+            line-height: 40px;
+            margin-bottom: 5px;
+        }
+        .header a{
+            width: 40%;
+        }
+        .header span{
+            font-size: 30px;
+        }
+        .header .txt{
+            font-size: 20px;
+            font-weight: bold;
+            flex-grow: 1;
+            letter-spacing: 1px;
+        }
+        #fixed{  
+            width: 100%;  
+            left: 0;  
+            top: 0;   
+            height: 45px;
+            background-color: #fff;
+        }
+        /* 图片 */
+        .tp img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        /* 图标 */
+        .tubiao .zxkf{
+            display: flex;  
+            flex-wrap: wrap;  
+            padding: 3px;
+            margin-bottom: 20px;
+        }
+        .icon{
+            font-size: 25px;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        .zxkf>li{
+            width: 20%;
+            line-height: 30px;  
+            font-size: 13px;
+            margin-bottom: 15px;
+            text-align: center;
+            background-color: #fff;
+            color: rgb(1, 1, 1);
+            letter-spacing: 1px;
+        }
+        /* 远银课堂 农农快答 */
+        .yykt{
+           margin-bottom: 40px;
+        }
+        .yykt .bt,.nnkd .bt{
+            display: flex;
+            margin-bottom: 25px;
+        }
+        .yykt .txt,.nnkd .txt{
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            letter-spacing: 1px;
+        }
+        .yykt .wz,.nnkd .wz{
+            color: rgb(104, 104, 104);
+            font-size: 18px;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            text-align: right;
+            padding-right: 10px;
+            letter-spacing: 1px;
+        }
+        .photo img{
+            width: 95%;
+            margin-left: 10px;
+            border-radius: 6px;
+        }
+        /* 绝对定位 */
+        .photo p{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color:rgba(9,33,4,.5);
+            width: 100%;
+            font-size: 14px;
+            color:#fff;
+            line-height: 28px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-radius: 0 0 6px 6px;
+            width: 93%;
+            margin-left: 10px;
+            letter-spacing: 1px;
+        }
+        /* tab选项卡 */
+        .tab{
+            margin: 0;
+            width: 100%;
+        }
+        .tab .tt{
+            display: flex;
+        }
+        .tt span{
+            width: 19%;
+            color:rgb(109,109,109);
+            font-size: 18px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-left: 2px;
+        }
+        .tt .cur{
+            color:rgb(51,51,51);
+            padding-bottom: 10px;
+            border-bottom: 3px solid rgb(33, 184, 151);
+            background-color: #fff;
+        }
+        .tab .tc{
+            display: none;
+            height: 350px; 
+            width: 100%;
+        }
+        .nr li{
+            display: flex;
+            line-height: 50px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid  rgb(229, 229, 229);
+            font-size: 18px;
+            color: rgb(51,51,51);
+            letter-spacing: 1px;
+            padding-left: 10px;
+        }
+        .nr .iconfont{
+            font-size: 30px;
+            flex-grow: 1;
+            text-align: right;
+            color:rgb(193,193,193);
+            padding-right: 10px;
+        }
+        /* 固定定位*/
+        #dbfixed{
+            padding-top: 8px;
+            padding-left: 25px;
+            width: 75%;
+            background-color: rgb(255,184,4);
+            border-radius: 16px;
+            height: 40px;
+            position: fixed;
+            left: 35px;
+            bottom: 10px;
+            z-index: 5;
+            color: rgb(255,255,248);
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fixed">
+      <div class="header">
+        <a href="./index.html">
+            <span class="iconfont icon-zuojiantou"></span>
+        </a>
+        <span class="txt">在线客服</span>
+        </span>
+        </div>  
+    </div>
+    <main>
+    <div class="tp"><img src="./img/zxkf.jpg"></div>
+    <div class="tubiao">
+        <ul class="zxkf">
+        </ul>
+    </div>
+    <div class="yykt">
+        <div class="bt">
+            <span class="txt">远银课堂</span>
+            <span class="wz">更多</span>
+        </div>
+        <div class="swiper photo">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> <img src="./img/kf1.jpg"><p>借记卡自助挂失的几种方法</p></div>
+                <div class="swiper-slide"> <img src="./img/kf2.jpg"><p>乘坐“卡片列车”了解信用卡有效期</p></div>
+                <div class="swiper-slide"> <img src="./img/kf3.jpg"><p>个人养老金小课堂开讲啦！快来和农行小姐姐一起了解</p></div>
+                <div class="swiper-slide"> <img src="./img/kf4.jpg"><p>个人养老金小课堂开讲啦！快来和农行小姐姐一起了解</p></div>
+        </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="nnkd">
+            <div class="bt">
+                <span class="txt">农农快答</span>
+                <span class="wz">换一换</span>
+            </div>
+        </div> 
+        <!-- tab选项卡-->
+        <div class="tab">
+            <div class="tt">
+                <span class="cur">信用卡</span>
+                <span>贷款</span>
+                <span>账户管理</span>
+                <span>安全</span>
+                <span>投资理财</span>
+            </div>
+        <div class="tc" style="display:block">
+                <ul class="nr">
+                    <li>
+                        <span>如何查询信用卡账单日</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何查询信用卡卡号</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>信用卡如何挂失补卡</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li><span>如何申请办理信用卡</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li><span>如何查询信用卡余额</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                </ul>
+                </div>
+                <div class="tc">
+                    <ul class="nr">
+                    <li>
+                        <span>个人住房贷款提前还款携带资料</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何申请网捷贷</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何申请惠农e贷</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>贷款计算器</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>误收他人贷款短信如何处理</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                </ul>
+                </div>
+                <div class="tc">
+                    <ul class="nr">
+                    <li><span>如何查询借记卡余额</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li><span>借记卡能否同号换、补卡</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>借记卡如何口头挂失</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>借记卡密码锁定</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li><span>借记卡如何注销</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                </ul>
+                </div>
+                <div class="tc">
+                     <ul class="nr">
+                    <li>
+                        <span>农业银行客服热线</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>农业银行信用卡客服热线</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何更新身份证件有效期</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何修改借记卡开户预留手机号</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何查询网点营业信息</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                </ul>
+                </div>
+               <div class="tc">
+                    <ul class="nr">
+                    <li>
+                        <span>如何赎回理财产品</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何购买理财产品</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何购买基金</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何购买大额存单</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                    <li>
+                        <span>如何定活互转</span>
+                        <span class="iconfont icon-jinru"></span>
+                    </li>
+                </ul>
+               </div>
+            </div>
+            <div id="dbfixed">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zaixiankefu-copy"></use>
+                </svg>
+                <span>更多服务，请点击咨询农农</span>
+            </div>
+    </footer>
+    <!-- json -->
+    <script>
+        var jarr=[{
+            svg:"#icon-khhcx",
+            wenzi:"开户行查询"
+        },{
+            svg:"#icon-wdxx",
+            wenzi:"我的信息"
+        },{
+            svg:"#icon-qbdd",
+            wenzi:"信用卡申请"
+        },{
+            svg:"#icon-wddk",
+            wenzi:"我的贷款"
+        },{
+            svg:"#icon-wdfw",
+            wenzi:"网点查询"
+        },{
+            svg:"#icon-xiane",
+            wenzi:"限额/支付"
+        },{
+            svg:"#icon-duanxintongzhi",
+            wenzi:"短信通知"
+        },{
+            svg:"#icon-xyksc",
+            wenzi:"信用卡商城"
+        },{
+            svg:"#icon-wdqk",
+            wenzi:"无卡取款"
+        },{
+            svg:"#icon-ddqbdd",
+            wenzi:"投诉渠道"
+        }];
+
+        //dom:
+        var zxkf=document.querySelector(".zxkf");
+        jarr.forEach((v,i)=>{
+            var nli=document.createElement("li");
+            nli.innerHTML=`
+            <svg class="icon" aria-hidden="true">
+                    <use xlink:href="${v.svg}"></use>
+                </svg>
+                <p>${v.wenzi}</p> `;
+                zxkf.appendChild(nli);
+        })
+    </script>
+    <!-- swiper -->
+    <script src="./js/swiper/swiper-bundle.min.js"></script>
+    <script>
+       var swiper = new Swiper(".photo", {
+       spaceBetween: 30,
+       centeredSlides: true,
+       autoplay: {
+         delay: 2500,
+         disableOnInteraction: false,
+       }})
+    </script>
+    <!-- 固定上导航 -->
+    <script>
+        window.onscroll=function(){//窗口相关
+        var st=document.documentElement.scrollTop;
+        if(st>fixed.offsetHeight){
+            fixed.style.position="fixed";
+        }
+        else{
+            fixed.style.position="static";
+        }
+        }
+    </script>
+    <!-- tab选项卡 -->
+    <script>
+        // dom
+        var tab=document.getElementsByClassName("tab")[0];
+        var tt=tab.querySelector(".tt");
+        var span=tt.querySelectorAll("span");
+        var tc=tab.getElementsByClassName("tc");
+         console.log(tab,tt,span,tc);
+        for(let i=0;i<span.length;i++){
+            span[i].index=i; 
+            span[i].onmouseover=function(){ 
+                for(let j=0;j<span.length;j++){
+                span[j].classList.remove("cur");
+                tc[j].style.display="none";
+            }
+            span[i].classList.add("cur");
+            tc[i].style.display="block"; 
+        }
+    }
+</script>
+</body>
+</html>

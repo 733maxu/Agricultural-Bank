@@ -1,0 +1,26 @@
+h1,h2,h3,h4,h5,h6,ul,p,body,form,dl,dd,dt{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:visited{
+    color: #000;
+}
+img{
+    border: none;
+    display: block;
+}
+body{
+    min-width:320px;
+    margin:0 auto;/* 加max-width时增加该属性 */
+    overflow-x: hidden;
+}
+html{
+    font-size:5.4vw;/* rem,另外可以用media query实现 */
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <title>20001010733-马旭 设置</title>
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/pub.css">
+    <link rel="stylesheet" href="./js/swiper/swiper-bundle.min.css">
+    <style>
+        body{
+            background-color:rgb(246,246,246);
+        }
+        /* 上导航 */
+        .header,.bt,.bbqh,.ztzb,.ys,.db{
+            background-color: #fff;
+        }
+        .header,.gn li,.bz li{
+            letter-spacing: 1px;
+            line-height: 45px;
+            display: flex;
+        }
+        .header a{
+            width: 45%;
+        }
+        .header .iconfont{
+            font-size:30px;
+            font-weight: bold;
+        }
+        .header .txt{
+            font-size: 20px;
+            flex-grow: 1;
+            font-weight: bold;
+        }
+        /* 版本切换 */
+        .bt,.ztzb,.ys,.db{
+            margin-top: 12px;
+        }
+        .bt{
+            height: 35px;
+            padding-top: 10px;
+        }
+        .bt .txt{
+            letter-spacing: 1px;
+            font-size: 18px;
+            color: #000;
+            padding-left: 10px; 
+        }
+        .bbqh{
+            padding-top: 8px;
+        }
+        .bbqh .xcb,.bbqh .dzb,.bbqh .bzb{
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .bbqh p{
+            margin-left: 10px;
+            font-size: 16px;
+            margin-right: 50px;
+        }
+        .bbqh .swiper .radio{
+            margin-left: 40px;
+        } 
+        .bbqh img{
+            width: 100%;
+        }
+        .bbqh .xm{
+            display: flex;
+            padding: 10px 0;
+        }
+        /* 主题装扮 */
+        .ztzb{
+            display: flex;
+            margin-bottom: 10px;
+            line-height: 45px;
+            padding-left: 10px; 
+        }
+        .ztzb .txt,.ys .txt,.db .txt{
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            color: #000;
+        }
+        .ztzb .iconfont, .ys .iconfont{
+            font-size:30px;
+            flex-grow: 1;
+            color: rgb(193,193,193);
+            text-align: right;
+        }
+        /* 隐私 */
+        .ys{
+            padding-top: 10px;
+            padding-left: 10px; 
+        }
+        .ys .wz{
+            font-size: 16px;
+            color:rgb(49,49,49);
+        }
+        .ys .gn{
+            margin-top: 10px;
+        }
+        .gn li:nth-child(1),.gn li:nth-child(2){
+            border-bottom: 1px solid rgb(229, 229, 229);
+        }
+        /* 底部 */
+        .db{
+            padding-left: 10px; 
+        }
+        .db .iconfont{
+            font-size:30px;
+            color: rgb(193,193,193);
+            text-align: right;
+        }
+        .db .txt{
+            flex-grow: 1;
+        }
+        .db .wz{
+            font-size: 16px;
+            letter-spacing: 1px;
+            color:rgb(127,127,127);
+        }
+        .bz li{
+            flex-wrap: wrap;
+        }
+        .bz li:nth-child(1),.bz li:nth-child(2){
+            border-bottom: 1px solid rgb(229, 229, 229);
+        }
+         /* 盒子的阴影 */
+         .xcb,.dzb,.bzb{
+            box-shadow: 6px 6px 6px rgb(237, 237, 237);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="./my.html">
+            <span class="iconfont icon-zuojiantou"></span>
+        </a>
+        <span class="txt">设置</span>
+        </span>
+    </div>
+    <main>
+        <div class="bt">
+            <span class="txt">版本切换</span>
+        </div>
+        <div class="swiper bbqh">
+            <div class="swiper-wrapper"> 
+                <div class="swiper-slide">
+                <div class="xcb">
+                    <img src="./img/xcb.jpg">
+                    <div class="xm">
+                        <p>乡村版</p>
+                        <input type="radio" name="type" value="a">
+                    </div>
+                </div>
+            </div>
+                <div class="swiper-slide">
+                <div class="dzb">
+                    <img src="./img/dzb.jpg">
+                    <div class="xm">
+                        <p>大字版</p>  
+                        <input type="radio" name="type" value="b">
+                    </div>         
+                </div>
+            </div>
+                <div class="swiper-slide">
+                <div class="bzb">
+                    <img src="./img/bzb.jpg">
+                    <div class="xm">
+                          <p>标准版</p> 
+                          <input type="radio" name="type" value="c" checked>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="ztzb">
+            <span class="txt">主题装扮</span>
+            <span class="iconfont icon-jinru"></span>
+        </div>
+        <div class="ys">
+            <span class="txt">隐私</span>
+            <ul class="gn">
+                <li><span class="wz">授权管理</span>
+                    <span class="iconfont icon-jinru"></span>
+                </li>
+                <li>
+                    <span class="wz">系统权限管理</span>
+                    <span class="iconfont icon-jinru"></span>
+                </li>
+                <li>
+                    <span class="wz">个性化推荐</span>
+                    <span class="iconfont icon-jinru"></span>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="db">
+            <ul class="bz">
+                <li>
+                    <span class="txt">消息设置</span>
+                    <span class="iconfont icon-jinru"></span>
+                </li>
+                <li>
+                    <span class="txt">通用</span>
+                    <span class="iconfont icon-jinru"></span>
+                </li>
+                <li>
+                    <span class="txt">关于我们</span>
+                    <span class="wz">版本号:V8.0.0</span>
+                    <span class="iconfont icon-jinru"></span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- swiper -->
+    <script src="./js/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".bbqh", {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+      });
+    </script>
+</body>
+</html>
